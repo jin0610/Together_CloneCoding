@@ -1,13 +1,25 @@
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
+import './App.css'; 
+import MainPage from './Pages/MainPage';
+import LoginPage from './Pages/LoginPage';
+import CreateAccountPage from './Pages/CreateAccountPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<MainPage/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/create_account' element={<CreateAccountPage/>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+// 메인페이지 : main
+// 로그인 : /login
+// 회원가입 : /create_account
+// 

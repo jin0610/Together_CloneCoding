@@ -1,0 +1,11 @@
+#footer_title{
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 114px;
+    height: 18px;
+    padding: 6px 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}

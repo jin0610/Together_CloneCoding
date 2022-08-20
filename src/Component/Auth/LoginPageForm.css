@@ -1,0 +1,12 @@
+#loginblock {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#loginform{
+    margin:0 auto;
+    outline-style: solid 1 1 1 1;
+    width: 50%;
+    background-color: aquamarine;
+
+}

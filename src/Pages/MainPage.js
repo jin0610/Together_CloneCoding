@@ -1,12 +1,15 @@
-import Header from "../Component/Common/Header";
+import Footer from "../Component/Common/Footer";
+import Header from "../Container/Header/HeaderContainer";
 import MainPageForm from "../Component/MainPage/MainPageForm";
+import PageBlock from "../Component/PageBlock";
 
 const MainPage = () =>{
     return(
-        <div>
+        <PageBlock>
             <Header/>
             <MainPageForm/>
-        </div>
+            <Footer/>
+        </PageBlock>
     )
 }
 

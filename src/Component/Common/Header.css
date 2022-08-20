@@ -1,6 +1,7 @@
 a, a:active, a:hover {
     text-decoration: none;
 }
+
 #head{
     top:0;
     left: 0;
@@ -19,7 +20,7 @@ a, a:active, a:hover {
     position: relative;
     align-items: center;
     justify-content: space-between;
-    width: 1120px;
+    width: 100%;
     margin : 0 auto;
     text-align: center;
 }
@@ -28,13 +29,35 @@ a, a:active, a:hover {
     height: 100%;
 }
 
-.head_logo .link_service {
+.link_service {
     display: block;
     width: 115px;
     height: 100%;
-    font-size: 0;
-    line-height:0;
-    text-indent: -9999px;
-    background: url(//t1.kakaocdn.net/together_image/svg/logo_pc.svg) 50%/contain no-repeat;
+}
+.headerlink {
+    display: block;
 }
 
+.link_btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 17px;
+    margin: 0 10px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: -.3px;
+    color: #202020;
+    background-color: #fff;
+}
+
+.btn_search{
+    height: auto;
+    margin-left: 5px;
+    padding: 6px;
+}

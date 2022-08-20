@@ -3,15 +3,17 @@ import { Route, Routes } from 'react-router';
 import './App.css'; 
 import MainPage from './Pages/MainPage';
 import LoginPage from './Pages/LoginPage';
-import CreateAccountPage from './Pages/CreateAccountPage';
+import SignUpPage from './Pages/SignUpPage';
+
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<MainPage/>}/>
         <Route path='/login' element={<LoginPage/>}/>
-        <Route path='/create_account' element={<CreateAccountPage/>}/>
+        <Route path='/create_account' element={<SignUpPage/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
 import CreateAccountForm from "../../Component/Auth/SignUpForm"
-
+const queryString = require('query-string');
 const CreateAccountContainer = () =>{
     const [form, setForm] = useState({
         email:'',
@@ -17,7 +17,7 @@ const CreateAccountContainer = () =>{
             [name] : value
         })
     }
-
+    
     const onSubmit = e =>{
         e.preventDefault();
         const {email, password, password2,nickname}= form;
@@ -35,7 +35,7 @@ const CreateAccountContainer = () =>{
             return
         }
         const data = {email, password,nickname}
-        axios.post('/',data).then(res=>{
+        axios.post('/auth/signup',data).then(res=>{
             console.log(res)
             if(res.status===200){
                 console.log("회원가입 성공")

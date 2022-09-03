@@ -21,22 +21,26 @@ const LoginContainer = () =>{
         })
     }
 
+
     const onSubmit = e =>{
         e.preventDefault();
         const {email, password} = form;
         const data = {
             email, password
         }
-        client.post('/auth/login',queryString.stringify(data)).then(res => {
-            localStorage.setItem("token", res.data.token );
-            console.log(localStorage.getItem("token"))
+
+        // id : 123@123 password:1234qwer
+        client.post('/auth/login',data).then(res => {
+            //localStorage.setItem("token", res.data.token );
+            //console.log(localStorage.getItem("token"))
             
             if(res.status === 200){
-                window.location.href = '/'
+                //window.location.href = '/'
                 cookies.set('refresh_token', res.data.token, { sameSite: 'strict' });
-                client.defaults.headers.common['x-access-token'] = `Bearer+${res.data.token}`
+                client.defaults.headers.common[''] = `Bearer ${res.data.token}`
+                console.log(res.data)
             }
-        }) 
+        })
     }
 
     useEffect(()=>{

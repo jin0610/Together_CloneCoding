@@ -4,6 +4,7 @@ import './App.css';
 import MainPage from './Pages/MainPage';
 import LoginPage from './Pages/LoginPage';
 import SignUpPage from './Pages/SignUpPage';
+import PostPage from './Pages/PostPage';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <Route path='/' element={<MainPage/>}/>
         <Route path='/login' element={<LoginPage/>}/>
         <Route path='/create_account' element={<SignUpPage/>}/>
+        <Route path='/board' element={<PostPage/>}/>
       </Routes>
     </BrowserRouter>
   );

@@ -1,8 +1,12 @@
+import { useState } from "react"
 import { Link } from "react-router-dom"
+import client from "../../client"
 import "./LoginPageForm.css"
 
 const LoginPageForm = (props) =>{
     const {form, onChange, onSubmit} = props
+
+
     return(
         <div className="loginblock">
             <div className="loginform">
@@ -14,6 +18,7 @@ const LoginPageForm = (props) =>{
                     <button>로그인</button>
                 </form>
                 <Link to ="/create_account"><button>회원가입</button></Link>
+
             </div>
         </div>
     )

@@ -4,11 +4,11 @@ import Cookies from "universal-cookie";
 const cookies = new Cookies()
 
 const client = axios.create({
-    baseURL: '',
+    baseURL: 'http://ec2-3-34-4-186.ap-northeast-2.compute.amazonaws.com:8080/',
     headers:{
-        "Content-Type":"application/x-www-form-urlencoded; charset=UTF-8",
+        "Content-Type":"application/json; charset=UTF-8",
         "Accept": "*/*",
-        //'x-access-token':,
+        //'Authorization':,
         
     }  
 })
